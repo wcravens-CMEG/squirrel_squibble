@@ -4,6 +4,6 @@ import segmentReducer from '../features/segments/segmentSlice'
 
 export default configureStore({
   reducer: {
-    segments: segmentsReducer
+    segments: segmentReducer
   }
 })
