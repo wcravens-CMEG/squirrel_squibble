@@ -8,7 +8,12 @@ const initialState = [
 const segmentSlice = createSlice({
   name: 'segments',
   initialState,
-  reducers: {}
+  reducers: {
+    segmentAdded(state, action) {
+      state.push(action.payload)
+    }
+  }
 })
 
+export const { segmentAdded } = segmentSlice.actions
 export default segmentSlice.reducer

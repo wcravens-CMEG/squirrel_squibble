@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-export const SegmentList = () {
+export const SegmentList = () => {
   const segments = useSelector(state => state.segments)
 
   const renderedSegments = segments.map( segment => (

@@ -1,16 +1,14 @@
 import React from 'react';
+import {SegmentList} from "./features/segments/SegmentList";
+import {AddSegmentForm} from "./features/segments/AddSegmentForm";
 
 function App() {
   return (
     <div style={{ textAlign: 'center' }}>
-      <header>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+      <React.Fragment>
+        <AddSegmentForm />
+        <SegmentList />
+      </React.Fragment>
     </div>
   );
 }
