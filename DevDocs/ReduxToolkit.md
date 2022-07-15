@@ -45,6 +45,12 @@ A `thunk` is a special kind of redux function that can contain asynchronous logi
 Thunk functions are used is the same typcial was as action creators.
 
 
+## Hacking on our Project
+
+```js
+npm install @reduxjs/toolkit react-redux
+```
+
 
 
 
