@@ -1,4 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-
-export const store = configureStore({ reducer: {} })
-
+import documentReducer from '../features/document/documentSlice'
+export const store = configureStore({
+  reducer: {
+    documents: documentReducer
+  }
+})
