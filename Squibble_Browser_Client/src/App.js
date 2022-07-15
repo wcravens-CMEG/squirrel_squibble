@@ -1,31 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux'
 import Hotkeys from 'react-hot-keys'
 import Document from './features/document/Document'
 import { addDocument } from './features/document/documentSlice'
 
-const keyMap = {
-  left: ['h'],
-  down: ['j'],
-  up:  ['k'],
-  right: ['l'],
-  newDocument: ['shift+y']
-}
 const App = () => {
-  const [ state, setState ] = useState('')
   const dispatch = useDispatch()
-  const onKeyUp = (keyName, e, handle) => {
-    console.log("test:onKeyUp", e, handle)
-    setState({
-      output: `onKeyUp ${keyName}`,
-    });
-  }
+
   const onKeyDown = (keyName, e, handle) => {
     console.log("test:onKeyDown", keyName, e, handle)
-    setState({
-      output: `onKeyDown ${keyName}`,
-    });
-    dispatch( addDocument('','') )
+    dispatch( addDocument('A nice little Header','... with a modest amount of content to go with it.') )
   }
 
   return (
@@ -34,11 +18,8 @@ const App = () => {
         keyName="shift+y"
         onKeyDown={onKeyDown}
       >
-        <div style={{ padding: "50px" }}>
-          {state.output}
-        </div>
+      <Document />
       </Hotkeys>
-        <Document />
     </>
   );
 }

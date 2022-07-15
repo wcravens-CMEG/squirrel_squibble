@@ -13,10 +13,13 @@ export const documentSlice = createSlice({
         return { payload: {
             _id: nanoid(),
             type: 'document',
-            header: header,
-            content: content,
             created_on: new Date().toISOString(),
-            scion: []
+            document: {
+                type: 'main',
+                header: header,
+                content: content,
+                scion: []
+              }
         } }
       }
     }
